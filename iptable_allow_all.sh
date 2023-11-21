@@ -22,6 +22,6 @@ iptables -t raw -X
 #
 #
 iptables-save
-iptables-save > /usr/local/rules.save
+iptables-save > /etc/iptables/rules.v4
 #
 echo "Iptables rules have been set!"
