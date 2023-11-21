@@ -22,6 +22,6 @@ ip6tables -t raw -X
 #
 #
 ip6tables-save
-ip6tables-save > /usr/local/rules6.save
+ip6tables-save > /etc/iptables/rules.v6
 #
 echo "Ip6tables rules have been set!"
