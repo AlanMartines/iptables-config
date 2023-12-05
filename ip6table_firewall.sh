@@ -40,7 +40,7 @@ $IP6TABLES -A INPUT -i docker0 -j ACCEPT
 $IP6TABLES -A INPUT -p tcp -m multiport --dports ssh,smtp,http,https -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
 $IP6TABLES -A INPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
 $IP6TABLES -A INPUT -p tcp -m multiport --dports 22,2280 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
-$IP6TABLES -A INPUT -p tcp -m multiport --dports 25,587,465,2525 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
+$IP6TABLES -A INPUT -p tcp -m multiport --dports 25,587,465,2525,10000 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
 #
 # Allow Ping from Inside to Outside
 $IP6TABLES -A INPUT -p ipv6-icmp --icmpv6-type echo-request -j ACCEPT

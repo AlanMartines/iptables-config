@@ -55,7 +55,7 @@ do
 done
 #
 # Permitir serviços específicos
-$IPTABLES -A INPUT -p tcp -m multiport --dports 22,25,80,443,587,465,2525,2280 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
+$IPTABLES -A INPUT -p tcp -m multiport --dports 22,25,80,443,587,465,2525,2280,10000 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
 #
 # Permitir pings ICMP
 $IPTABLES -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
